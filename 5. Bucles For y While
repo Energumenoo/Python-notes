@@ -1,0 +1,257 @@
+   ### BUCLES ### for
+   
+#for -> Recorre elementos
+
+animales =["gato", "perro", "loro", "pinguino"]
+
+for x in animales:
+    print(x)
+    
+#Iterar sobre dos listas o más con zip# Ambas listas deben tener el mismo rango
+
+numeros = [1,2,3,4]
+
+for x,y in zip(animales,numeros):
+    print(x)
+    print(y)
+   
+#USAR FUNCION RANGE
+for i in range(10):          #range(10) toma desde el numero 0 hasta el numero 9 # 10 numeros en total
+    print(i)
+   
+for i in range(20):          #range(20) toma desde el numero 0 hasta el numero 19 # 20 numeros en total
+    print(i)   
+   
+for i in range(10,20):          #range(10,20) toma desde el numero 10 hasta el numero 19 
+    print(i)     
+   
+for i in range(1,5):          #range(10,20) toma desde el numero 1 hasta el numero 4
+    print(i)   
+   
+   
+#Obtener el indice y el valor en una lista con for
+
+for x in enumerate(numeros):                                  #La funcion enumerate crea una tupla con cada indice y su respectivo valor
+    print("el indice es ",x[0]," Y el valor es ",x[1])
+
+for x in enumerate(animales):
+    print("el indice es ",x[0]," Y el animal es ",x[1])  
+   
+conjunto={"gato", "perro", "loro", "pinguino"}  
+ 
+for i in enumerate(conjunto):                                      #enumerate crea un indice para el conjunto
+      print("el indice es ",i[0]," y el animal es ", i[1])
+    
+
+#se puede usar el else dentro de un for para correr algo que yo quiera al finalizar el bucle
+
+vacio = []
+for i in vacio:
+    print(i)
+else:
+    print("se acabo")
+   
+
+for i in range(1,6):
+    print(i)
+else:
+    print("se acabo") 
+   
+   
+#iterar un diccionario
+
+diccionario = {
+    "nombre": "Andrés",
+    "apellido": "Aguilera",
+    "nacionalidad": "Colombiano"
+    }   
+
+for i in diccionario:         #Devuelve solo el indice
+    print(i)
+
+for i in diccionario.items():         #Devuelve una tupla para cada clave del indice con su valor
+    print(i)
+    
+for i in diccionario.items():         #Asi podemos acceder al valor y al indice
+    clave = i[0]
+    valor = i[1]
+    print("La clave es ", clave," y el valor es ", valor)
+   
+   
+   
+
+diccionario2 = {
+    "nombre": 1,
+    "apellido": 2,
+    "nacionalidad": 3
+    }   
+
+for i in diccionario2:         #Devuelve solo el indice
+    print(i)
+
+for i in diccionario2.items():         #Devuelve una tupla para cada clave del indice con su valor
+    print(i)
+    
+for i in diccionario2.items():         #Asi podemos acceder al valor y al indice
+    clave = i[0]
+    valor = i[1]
+    print("La clave es ", clave," y el valor es ", valor)
+    
+    
+# Usar CONTINUE en un bucle para excluir un valor de lo que estamos iterando
+
+for i in range(10):     #Va a imprimir todos los valores menos el 6
+    if i == 6 :
+        continue
+    print(i)
+
+for i in range(10):     #Va a imprimir todos los valores menos el 6
+    print("x")          #Va a imprimir x 10 veces porque está antes de la condicion de obviar al 6  
+    if i == 6 :
+        continue
+    print("terminado")   #Va a imprimir terminado 9 veces porque está despues de la condicion de obviar al 6  
+    print(i)             #Va a imprimir i 9 veces porque está despues de la condicion de obviar al 6 
+
+#Usar break para terminar el bucle si se cumple una condicion
+
+for i in range(10):          #Va a imprimir hasta que encuentre el 6
+    print(i)
+    if i == 6:
+        break
+else: print("terminado")     #No ejecuta el else porque despues del break no se ejecuta nada. Solo se ejecutaria else si no hubiera un 6
+                            #Si el else tuviera la misma indentación que el if iprimiria terminado cada vez que imprime un numero
+
+
+for i in range(10):          #Imprime hasta el 5, porque apenas encuentra el 6 se rompe               
+    if i ==6:
+        break
+    print(i)
+
+#for en una sola linea para transformar rapidamente una lista
+
+numeros=[2,5,9,10]
+
+numeros_duplicada = [x*2 for x in numeros]
+
+
+
+   ### BUCLES WHILE ###
+
+#While -> Ejecutar codigo siempre que se cumpla una condición
+
+contador = 1
+numeros = 1
+
+while contador <10:      #Mientras la variable contador sea menor a 10
+    print(contador)         #imprima la variable contador
+    contador += 1           #Luego reescriba esa variable sumandole 1
+    
+    
+v1=0
+v2=5
+
+while v2<50:            #Usar while para obtener la suma de todos los multiplos de 5 menores a 50
+    v1=v1+v2
+    v2 = v2+5
+print(v1)
+
+###Diferencia importante en indentación
+while v2<50:            
+    v1=v1+v2
+    v2 = v2+5
+    print(v1)         #Aca print está dentro del while, entonces v1 se va a a imprimir en cada vuelta del while
+
+    
+#Mostrar la tabla del 7 con while
+
+a=7
+b=1
+
+while b<11:
+    c=a*b
+    print("7 x",b,"=",c)
+    b=b+1
+    
+#Mostrar la suma y la cantidad de numeros pares comprendidos entre dos numeros, contando esos dos numeros
+
+x=list(range(5,10))
+
+v1=2 
+v2=10 
+pares=[]
+
+while v1<v2+1:
+    if v1%2==0:
+        pares.append(v1)
+    v1=v1+1
+suma_pares=sum(pares)
+cantidad_pares=len(pares)
+
+
+### While con BREAK y CONTINUE ###
+
+#Loop infinito porque no se puede actualizar la variable
+
+x = 0
+while x < 5:
+    if x == 2:
+        continue   # si x=2 nunca vuelve a aumentar x
+    print(x)
+    x += 1
+
+#Imprime del uno al 10 sin contar el 6
+x=0
+while x<10:            #Mientras x sea menor a 10
+    x=x+1              #Sumele uno
+    if x==6:           #Si x es 6 
+        continue       #Saltese todo lo de abajo y vuelva a empezar el ciclo
+    print(x)           #Si no, imprima x
+
+#Imprime todas las "rondas" del while desde el 1 al 10 e imprime individualmente todos los numeros excepto el 6
+
+x=0
+while x<10:
+    x=x+1
+    print("Ronda ", x)
+    if x==6:
+        continue
+    print(x)
+
+#Imprime del 1 al 10 las rondas y los numeros individuales excluyendo siempre al 6
+
+x=0
+while x<10:               #Mientras x sea menor a 10
+    x=x+1                 #Sumele uno
+    if x==6:              #Si x es 6
+        continue          #Saltese todo lo de abajo
+    print("Ronda ", x)    #Si no imprima el numero de ronda
+    print(x)              #e imprima el numero individualmente
+
+
+
+  ###BREAK### -> Termina la iteración cuando se cumple la condición
+#Se rompe despues de imprimir el 11
+x=0
+while x<15:        
+    x=x+1
+    print(x)                 #Imprime hasta el 11      
+    if x == 11:
+        break
+    print("No se ha roto")   #Imprime No se ha roto 10 veces
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
