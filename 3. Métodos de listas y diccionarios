@@ -1,0 +1,75 @@
+   ### METODOS DE LISTAS ###
+   
+#Crear lista   
+lista = ["a", "b", "c"]
+lista = list(["a", "b", "c"])
+
+
+
+#Saber cuantos elementos tiene una lista
+len(lista)
+
+
+
+#Agregar valores a listas
+lista.append("valor")   #Agrega de ultima posicion "valor" a la lista
+lista.insert(0, "valor inicial")  #Agrega un valor a la lista en la posicion que le indiquemos
+lista.extend(["v1", "v2"])        #Agregar varios elementos a una lista. Quedan de ultimo.
+
+
+
+#Eliminar elementos de una lista
+
+lista.pop(0)         #Elimina el elemento de la lista que está en la posicion que le indico
+lista.pop(-1)        #Elimina el ultimo elemento. Con -2 se elimina el antepenultimo
+
+lista.remove("v1")   #Elimina el elemento que yo le indico. Debo poner el valor del elemento.
+xd =[25,10,8,4,1,2,2,2]  #Si tengo el mismo valor repetido se elimina uno solo, no todos. 
+xd.remove(2)
+
+xd.clear()  #Elimina todos los elementos de la lista
+
+lista.sort()           #Ordena los elementos de menor a mayor. No funciona si hay str. Si hay T o F el F es menor que el T
+xd.sort(reverse=True)  #Los ordena de mayor a menor. Primero T y luego F.
+
+lista.reverse()        #Invierte los elementos de una lista
+
+xd.index(1)            #Buscar la posicion en la que está un valor dentro de la lista. Si no está tira error.
+
+
+
+   ### METODOS DE DICCIONARIOS ###
+
+diccionario = {
+    "nombre": "Andres",
+    "apellido": "Aguilera",
+    "estatura": 1.69
+    }
+
+diccionario.keys()   #Nos dice el indice. Nos da las claves. ##También sirve para iterar
+
+diccionario.get("nombre")  #Nosotros le metemos el indice, el nos da el valor.
+diccionario["nombre"]       #Asi tambien se puede, la diferencia es que el get me tira un none si le meto un indice que no existe
+                            #La segunda forma me para todo el codigo
+
+diccionario.clear()  #Eliminar todo el diccionario
+
+diccionario.pop("nombre", "otro elemento")  #Eliminar un elemento del diccionario
+
+#Obteniendo un elemento dict_items para poder iterar sobre el diccionario
+diccionario_iterable = diccionario.items()
+
+
+   ### DESEMPAQUETAR VARIABLES ###
+
+#Puedo coger una tupla o una lista y crear una variable con su nombre para cada elemento de la tupla o lista
+
+tupla = ("Andres", "Aguilera", 25)
+lista = ["Andres", "Aguilera", 25]
+
+nombre, apellido, edad = tupla
+nombre2, apellido2, edad2 = lista
+
+   ### EMPAQUETAR VARIABLES ###
+tubla2= "Andres", "Aguilera"   
+
