@@ -1,0 +1,48 @@
+   ### CONDICIONALES ###  
+   
+y=10
+if y>9:                           #Condicion 1
+    print(y)
+    
+x=10
+        
+if x>9:                           #Condicion 1
+    print("Eres estrato 3")
+elif x>4:                          #Condicion 2
+    print("Eres estrato 2")
+else:                             #De lo contrario
+    print("Eres estrato 1")
+    
+#If anidado
+
+a=7
+b=False
+
+if a>6:                               #condicion 1
+    if b==True:                        #sub condicion 1
+        print("excelente")            #qué pasa si se cumplen condicion 1 y sub condicion 1
+    elif b==False:                     #sub condicion 2
+        print("casi perfecto")        #qué pasa si se cumplen condicion 1 y sub condicion 2     
+    else:                             #Se puede obviar
+        print("regular")              #Que pasa si solo se cumple la primera# esto nunca va a aplicar porque si se cumple la primera revisara las subcondiciones
+elif a>4:                             #Condicion 2
+        print("puedes mejorar")
+else:                                 #Que pasa si no se cumple ninguna condicion
+    print("tas mal")
+        
+
+    
+   ### OPERADORES LÓGICOS ###
+
+#AND   
+Resultado = True & True
+Resultado2 = False & True
+
+#OR
+Resultado3 = True | False
+Resultado4 = False | False
+
+#NOT
+
+no_es_verdadero = not True
+no_es_falso = not False
