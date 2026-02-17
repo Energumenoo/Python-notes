@@ -1,0 +1,14 @@
+   ### TEORIA DE CONJUNTOS ###
+   
+conjunto1 = {1,3,5,7}
+conjunto2 = {1,5,7}
+
+es_subconjunto = conjunto2.issubset(conjunto1)         #Verifica si conjunto 2 está contenido en conjunto 1 #Si conjunto 2 es subconjunto de conjunto 1
+es_superconjunto = conjunto1.issuperset(conjunto2)     #Verifica si conjunto 1 contiene conjunto 2 #Si conjunto 1 es superconjunto de conjunto 2
+
+conjuntoA = {1,2,3}
+conjuntoB = {4,5,6}
+
+no_elemento_comun = conjuntoA.isdisjoint(conjuntoB)   #Me dice si no hay elementos en común
+
+
