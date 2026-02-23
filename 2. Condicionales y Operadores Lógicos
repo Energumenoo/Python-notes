@@ -29,9 +29,28 @@ elif a>4:                             #Condicion 2
         print("puedes mejorar")
 else:                                 #Que pasa si no se cumple ninguna condicion
     print("tas mal")
-        
 
-    
+
+
+def sx(genero,orientacion):
+    if genero == "hombre":
+        if orientacion == "heterosexual":
+            print("Hombre gusta mujer")
+        elif orientacion == "homosexual":
+            print("hombre gusta hombre")
+        else: print("Tiene que ser homo o hetero")
+    elif genero == "mujer":
+        if orientacion == "heterosexual":
+            print("mujer gusta mujer")
+        elif orientacion == "homosexual":
+            print("mujer gusta mujer")
+        else:print("Tiene que ser homo o hetero") 
+    else: print("Tiene que ser hombre o mujer")
+
+
+
+
+
    ### OPERADORES LÓGICOS ###
 
 #AND   
